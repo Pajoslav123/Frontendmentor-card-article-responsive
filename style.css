@@ -22,9 +22,10 @@ body {
   max-width: 1200px;
   border-radius: 0 10px 10px 0;
   position: relative;
+  transform: scale(0.7);
+  background-color: hsl(244, 38%, 16%);
 }
 .content {
-  background-color: hsl(244, 38%, 16%);
   border-radius: 10px 0 0 10px;
   display: flex;
   flex-direction: column;
@@ -74,4 +75,26 @@ img {
   bottom: 0;
   background: #830bb552;
   border-radius: 10px;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    flex-direction: column-reverse;
+    max-width: 600px;
+    transform: scale(0.6);
+  }
+  .stats {
+    flex-direction: column;
+    padding-right: 0;
+  }
+  .stats .item {
+    padding-bottom: 2rem;
+  }
+  .content {
+    align-items: center;
+    text-align: center;
+  }
+  .image img {
+    width: 100%;
+  }
 }
